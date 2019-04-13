@@ -49,7 +49,22 @@ variableUno <- 1
 
 variableUno <- variableUno + variableUno
 
-# Funciones
+# Funciones: sirven para realizar tareas repetitivas 
 
  funcionUno()
+ 
+ # crear variable prueba por el error
+ 
+ variableCuatro <- "hola" 
+ rm(variableCuatro) 
+ 
+ source("Funciones R.R")
+ funcionUno(1,2) 
+
+ variableUno <- funcionUno(1,2) 
+
+ # Corroborando si la funcion sirve
+ funcionVelocidad(10,5) 
+ 
+ funcionResto(3,4,7)
  
