@@ -67,4 +67,40 @@ variableUno <- variableUno + variableUno
  funcionVelocidad(10,5) 
  
  funcionResto(3,4,7)
+ rm (list= ls ())
  
+ #Tarea: para elevar puedo poner el gorro o doble asterisco **
+ 
+ funcionAreaCirculo <- function (radio){
+  print (pi*radio^2)
+  #pi*radio^2
+}
+ #Tarea 2: 
+ funcionAnilloCirculo <- function(radioGrande,radioPequeño){
+   print (pi*radioGrande^2-pi*radioPequeño^2)
+ }
+ 
+ #Tarea 3:Puedo reutilizar las funcionaes que ya había utilizado. abs es solo para evitar el negativo en caso que no ponga en orden los radios grandes o pequeñso
+ funcionAnilloCirculo2 <- function(radioGrande,radioPequeño){
+  abs (funcionAreaCirculo(radioGrande)-funcionAreaCirculo(radioPequeño))
+   
+ }
+ #Receta de diseño: 
+ #Area del anillo de un circulo de otra manera: float float -> float
+ # DEF: Calcular el área del anillo, restando el area del circulo grande menos el pequeño
+ # Ej: 2, 1 -> 9,42
+ 
+ 
+VariableDiez <- funcionAnilloCirculo2(2,1) 
+
+#Tarea 4:
+#Receta de diseño:
+# Tiempo a casa de amigo: float float -> float
+# DEF: Calcular el tiempo de demora de mi casa a la casa de mi amigo, como t= d/v
+# Ej: 2 4 -> 0.5 
+
+funcionTiempoAmigo <- function(distancia,velocidad){
+  print (distancia/velocidad)
+}
+variableOnce <- funcionTiempoAmigo(2,4) 
+  

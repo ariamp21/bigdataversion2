@@ -48,3 +48,20 @@ resto <- function(x,y,z){
 }
 
 VariableResto <- resto(3,4,7)
+
+#AreaCirculo: float -> float
+#DEF: Calcular el área de un círculo con radio "radio"
+#Ej: 2 -> 12.56
+source ("miPrimerScript.R")
+
+variableSiete <- funcionAreaCirculo(2)
+
+
+#Tarea 2: 
+#AnilloCirculo: float float -> float
+#DEF: Calcular el área del anillo del círculo con radio "radioGrande" y "radioPequeño"
+#Ej: 2,1 -> 9.4245 
+#Considerar que hay q poner los datos en orden, el R grande para restarle el R pequeño
+source ("miPrimerScript")
+
+variableOcho <- funcionAnilloCirculo(2,1)
