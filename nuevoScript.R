@@ -184,14 +184,39 @@ if(radio1>radio2){
   funcionAnilloCirculo2(radio2,radio1)
 }
 
-#Ejercicio 3: Demuestre que es mayor, menor o igual a 0
-x = 2
+#Ejercicio 3: Demuestre que es mayor, menor o igual a 0. Si se cumple la condicion, 
+#me da este resultado, en caso contrario ocurre otro resultado, y si no, finalmente da el
+#del else.
+x <- 2
+
 if(x>0){
  print("positivo")
+}else if(x==0){
+  print ("igual0")
+}else{
+  print ("negativo")
 }
-if(x==0){
-  print ()
-}
-if (x<0){
 
+#qué pasa si pongo texto? me da positivo, por lo que hay q arreglarlo
+x <- -2 
+
+if(x>0){
+  print("positivo")
+}else if(x==0){
+  print ("igual0")
+}else{
+  print ("negativo")
 }
+
+#Crear nueva funcion de mayor menor
+
+funcionMayoryMenor <- function(x){
+if(x>0){
+    print("positivo")
+}else if(x==0){
+    print ("igual0")
+}else{
+    print ("negativo")
+  }
+}  
+funcionMayoryMenor(2)
