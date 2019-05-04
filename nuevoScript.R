@@ -220,3 +220,135 @@ if(x>0){
   }
 }  
 funcionMayoryMenor(2)
+
+#cuando queremos evitar q tome texto cndo quiero evaluar número, debo ponerlo en
+#primera condición, es decir, en el IF.
+
+#Crear un if para descartar q sea texto y solo considerar números: El true del final
+#pruedo eliminarlo, debido a q la condicion que muestro es la vdd
+
+funcionX <- function(x){
+if(grepl("[A-Z a-z]",x)==TRUE){
+  print ("texto")
+}else if(x<0){
+  print("negativo")
+}else if(x>0){
+  print("positivo")
+}else{
+  print("es cero")
+}
+funcionX(2)
+
+#PREGUNTAAAAAAAAAR
+
+
+
+#Crear una lista: cuando hago print me saldrá c/u de los elementos y su posición
+lista1 <- list()
+lista2 <- list("hola",1,2,"mundo")
+
+print(lista1)
+print(lista2)
+
+#encontrar un elemento de tal posicion
+lista2[2]
+
+#agregar una vble a la lista
+lista2 <- c(lista2,"Ariam")
+print(lista2)
+
+#length determina la cantidad de elementos q tiene la lista
+lista2 <- c(lista2,"Dianita")
+length(lista2)
+
+#Para eliminar un elto de la lista, la llamo x su posicion pero en negativo
+#sale el numero 1 pq puedo agregar listas dentro de las listas
+print(lista2)
+#solo estoy mostrando la lista sin el elto de la posicion 3, tb puedo eliminar" un rango
+#lista2(-1:-5)
+lista2[-3]
+
+#si queremos realmente eliminar para siempre, debo asignarlo
+lista2 <- lista2[-3]
+print(lista2)
+
+#para eliminar el último dato tb puedo ponerle length pq es el tño total y luego se debe 
+#reasignar para q lo lea
+lista2[-length(lista2)]
+lista2 <- lista2[-length(lista2)]
+
+
+#Reescribir la posicion, q en vez de numerito me de el nombre 2=dos
+lista2[2] <- "Dos"
+print(lista2)
+
+#Intercambiar elementos; tmp es variable temporal, rescato el valor de la 2, lo guardo, lo reemplazo y
+#lo devuelvo
+lista3 <- list(3,1)
+tmp <- lista3[2]
+lista3[2] <- lista3[1]
+lista3[1] <- tmp
+print(lista3)
+
+#For o for-loop: Permite realizar frecuencias, va recorriendo un elto tras otro de manera
+#automatica, existe una acción q se va repitiendo una vez q la condicion q establecimos
+#se cumplan
+
+#DEF for: La variable i que esté contenida dentro de la secuencia de 1 a 100
+#puedo recorrer toda la lista si pongo for(i in 1:length(lista1))
+
+for(i in 1:100){
+  print(i)
+}
+#Tarea con décimas: Que con el for corriera la lista. 2 maneras.
+for(i in 1:length(lista2)){
+  print(lista2[i])
+}
+for(i in lista2){
+  print(i)
+}
+#Tarea de q en vez de q corra con el print la lista, q sea x el if creado clase anterior
+lista4 <- list("Ariam", "Boris", 21, 22) 
+for(i in 1:length(lista4)){
+  if(grepl("[A-Z a-z]",lista4[i])){
+    print ("texto")
+  }else if(lista4[i]<0){
+    print("negativo")
+  }else if(lista4[i]>0){
+    print("positivo")
+  }else{
+    print("es cero")
+  }
+}
+
+#Crear una funcion q contenga lo q hicimos para det si es -,+, 0 o texto y luego con el
+#for la hago correr
+check2valor <- function(elValor){
+    if(grepl("[A-Z a-z]",elValor)){
+      print ("texto")
+    }else if(elValor<0){
+      print("negativo")
+    }else if(elValor>0){
+      print("positivo")
+    }else{
+      print("es cero")
+    }
+}
+
+for (w in 1:length(lista4)){
+  check2valor(lista4[w])
+}
+
+#WHILE: Mientras cierto elto tenga un valor, pasa lo sgte con la otra. Paste concatena elementos
+variable <- 0
+while(TRUE){
+  print("hola mundo",variable))
+  variable <- variable + 1
+}
+
+variable <- 0
+while (variable < 1000){
+  print(paste("hola mundo ->", variable))
+  variable <- variable + 1
+}
+#Tarea: Encontrar WHILE DO, teniendo ya la información, dps preguntas
